@@ -1,11 +1,15 @@
 <html>
 <head>
 <title>open window!</title>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous"></script>
 </head>
 <body>
 <script>
-const url = 'https://lovetwice1012.github.io/main.html'
-window.open(url, '_blank')
+$(window).on('beforeunload', function(e) {
+    const url = 'https://lovetwice1012.github.io/main.html';
+    window.open(url, '_blank');
+    return false;
+});
 </script>
 </body>
 </html>
