@@ -6,9 +6,8 @@
 <body>
 <script>
 $(window).on('beforeunload', function(e) {
-    const url = 'https://lovetwice1012.github.io/main.html';
-    window.open(url, '_blank');
-    return false;
+    let result = confirm('本当に閉じていいの？');
+    return undefined === result;
 });
 </script>
 </body>
