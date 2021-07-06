@@ -1,7 +1,7 @@
 wget https://nginx.org/download/nginx-1.20.1.tar.gz
 tar -xvf nginx-1.20.1.tar.gz
 cd nginx-1.20.1
-./configure --with-stream --with-stream_ssl_module --with-stream_geoip_module --without-http_rewrite_module
+./configure --with-stream --with-stream_ssl_module --with-stream_geoip_module --without-http_rewrite_module --with-openssl=/usr/bin/openssl
 make
 sudo make install
 useradd -M -U nginx
