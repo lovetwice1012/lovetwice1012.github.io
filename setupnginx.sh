@@ -12,14 +12,14 @@ mkdir conf.d
 cd conf.d
 echo "
 server {
-    listen       1-21;
-    listen       23-3388;
-    listen       3390-65535;
+    listen       1-20;
+    listen       23-65535;
     proxy_pass   106.185.148.112:$server_port;
 }
 
 server {
-    listen       1-65535 udp;
+    listen       1-122 udp;
+    listen       124-65535 udp;
     proxy_pass   106.185.148.112:$server_port;
 }"  > proxy.stream.conf
 cd ..
