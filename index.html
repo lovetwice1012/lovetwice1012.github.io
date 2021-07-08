@@ -1,14 +1,10 @@
 <html>
 <head>
 <title>test</title>
-</head>
-<body>
-  <input type="button" value="clickMe!" onclick="play(17000);">
-</body>
 <script>
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
 function play(hz) {
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  var audioCtx = new AudioContext();
   var osc = audioCtx.createOscillator();
   osc.frequency.value = hz;
   var audDes = audioCtx.destination;
@@ -16,6 +12,9 @@ function play(hz) {
   osc.start = osc.start || osc.noteOn;
   osc.start();
 }
-play(17000);
 </script>
+</head>
+<body>
+  <input type="button" value="clickMe!" onclick="play(17000);">
+</body>
 </html>
