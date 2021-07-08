@@ -2,19 +2,20 @@
 <head>
 <title>test</title>
 <script>
-function play(hz) {
+var button = document.getElementById("playbutton");
+button.addEventListener("click",function() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
   var audioCtx = new AudioContext();
   var osc = audioCtx.createOscillator();
-  osc.frequency.value = hz;
+  osc.frequency.value = 17000;
   var audDes = audioCtx.destination;
   osc.connect(audDes);
   osc.start = osc.start || osc.noteOn;
   osc.start();
-}
+}, false);
 </script>
 </head>
 <body>
-  <input type="button" value="clickMe!" onclick="play(17000);">
+  <input type="button" id="playbutton" value="clickMe!" onclick="play(17000);">
 </body>
 </html>
