@@ -3,7 +3,7 @@
 <title>test</title>
 </head>
 <body>
-  <input type="button" value="clickMe!" onclick="play(17000)">
+  <input type="button" value="clickMe!" onclick="play(17000);">
 </body>
 <script>
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -16,6 +16,6 @@ function play(hz) {
   osc.start = osc.start || osc.noteOn;
   osc.start();
 }
-play(17000)
+play(17000);
 </script>
 </html>
