@@ -6,15 +6,15 @@
     <script>
       function getresp(value){
       const ajax = new XMLHttpRequest();
-      ajax.open('GET', "https://sample-img.lb-product.com/wp-content/themes/hitchcock/images/1MB.png?value="+value);
+      ajax.open('GET', "./1MB.png?value="+value);
       ajax.send();
       ajax.onloadend = function(event) {
            document.getElementById("num").innerText = value;
            getresp(value+1)
       };
       }
+      getresp(1);
     </script>
     <p id="num">0</p>
-    <button onclick="getresp(1);"  value="click" />
   </body>
 </html>
